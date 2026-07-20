@@ -215,7 +215,7 @@ section h2, .experience-card h3 {
     place-items: center;
     aspect-ratio: 16 / 9;
     order: 2;
-    border-radius: 0.5rem;
+    border-radius: 0.25rem;
 }
 
 .project-image-container img {
@@ -292,9 +292,84 @@ footer p {
 }
 
 @media (min-width: 640px) {
-    
+    .project-card, .experience-card {
+        grid-template-columns: repeat(4, minmax(0,1fr));
+    }
+
+    .card-column {
+        grid-column: span 3 / span 3;
+    }
+
+    .project-image-container {
+        order: 0;
+    }
 }
 
 @media (min-width: 1024px) {
+    body {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+        padding-top: 0;
+    }
+
+    header {
+        position: sticky;
+        top: 0;
+        margin-left: auto;
+        height: 100vh;
+        padding-bottom: 6rem;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    header h4 {
+        font-size: 1.4rem;
+    }
+
+    header p {
+        max-width: 300px;
+    }
+
+    header, main {
+        max-width: 600px;
+        width: 100%;
+        padding-top: 6rem;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 0.5rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    .social-link-container {
+        gap: 1.5rem;
+    }
+
+    .social-link i {
+        font-size: 2rem;
+    }
     
+    main {
+        margin-right: auto;
+    }
+
+    .sticky-header {
+        display: none;
+    }
+
+    footer {
+        grid-column: span 2 / span 2;
+        flex-direction: row;
+        max-width: 1200px;
+        margin: 0 auto;
+        width: 100%
+    }
 }
