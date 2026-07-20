@@ -191,6 +191,10 @@ section h2, .experience-card h3 {
     font-size: 1rem;
 }
 
+.anchor-icon {
+    padding-left: 0.5rem;
+}
+
 .tag-container {
     display: flex;
     flex-wrap: wrap;
@@ -302,6 +306,31 @@ footer p {
 
     .project-image-container {
         order: 0;
+    }
+
+    header {
+        max-width: unset;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    header h4 {
+        font-size: 1.4rem;
+        max-width: 300px
+    }
+
+    header p {
+        max-width: 300px;
+    }
+
+    .social-link-container {
+        gap: 1.5rem;
+    }
+
+    .social-link i {
+        font-size: 2rem;
     }
 }
 
